@@ -1,5 +1,5 @@
 {
-  "public":"localData",
+  
   "builds": [
     {
       "src": "./app.js",
