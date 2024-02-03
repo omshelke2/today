@@ -5,7 +5,7 @@ const request = require("request");
 const https = require("https");
 
 app.use(bodyParser.urlencoded({extended:true}));
-// app.use(express.static("localData"));
+app.use(express.static("localData"));
 
 
 
