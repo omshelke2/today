@@ -5,16 +5,18 @@ const request = require("request");
 const https = require("https");
 
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(express.static("localData"));
+// app.use(express.static("localData"));
+app.use(express.static(__dirname + '/public'));
+
 
 //for mime text type error for css files
-app.use(express.static('localData', {
-    setHeaders: (res, path, stat) => {
-      if (path.endsWith('.css')) {
-        res.setHeader('Content-Type', 'text/css');
-      }
-    }
-  }));
+// app.use(express.static('localData', {
+//     setHeaders: (res, path, stat) => {
+//       if (path.endsWith('.css')) {
+//         res.setHeader('Content-Type', 'text/css');
+//       }
+//     }
+//   }));
   
 
 
