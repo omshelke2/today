@@ -29,7 +29,9 @@ app.get("/",function(req,res){
 app.post("/",function(req,res){
     const fname = req.body.firstName;
     const lname = req.body.lastName;
+    const commentText = req.body.messageBlock;
     const email = req.body.email;
+
 
     // console.log(fname);
     // console.log(lname);
@@ -41,6 +43,7 @@ app.post("/",function(req,res){
             {
                 "email_address":email,
                 "status":"subscribed",
+                "COMMENT":commentText,
                 "merge_fields":{
                     "FNAME":fname,
                     "LNAME":lname
