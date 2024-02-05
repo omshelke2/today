@@ -43,10 +43,11 @@ app.post("/",function(req,res){
             {
                 "email_address":email,
                 "status":"subscribed",
-                "COMMENT":commentText,
+                
                 "merge_fields":{
                     "FNAME":fname,
-                    "LNAME":lname
+                    "LNAME":lname,
+                    "COMMENT":commentText
                 }
             }
         ]
